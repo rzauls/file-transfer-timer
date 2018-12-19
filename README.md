@@ -7,7 +7,7 @@ A simple python socket-based networks speed measuring tool. Created mainly for R
 1. Create a desired file size
 
     * Windows
-    ```fsutil file new data.dat <size>```
+    ```fsutil file createNew data.dat <size>```
     * Unix
     ```dd if=/dev/zero of=data.dat  bs=<size>  count=1```
 
