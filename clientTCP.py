@@ -3,27 +3,28 @@ import socket, time, os
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket object (s.SOCK_STREAM = TCP, s.SOCK_DGRAM = UDP)
 
 # ======================================
-# CHANGE THIS IP ADRESS TO THE SERVER IP
+# CHANGE THIS IP ADDRESS TO THE SERVER IP
 host = "192.168.8.110"  # destination IP
 port = 3000           
-# CHANGE THIS IP ADRESS TO THE SERVER IP
+# CHANGE THIS IP ADDRESS TO THE SERVER IP
 # ======================================
 
 s.connect((host, port))
 msg = "Hello server!"
 s.send(msg.encode())
-count = 0
+count = 0 # counter for animation
 startTime = time.time()
 with open('received_file.dat', 'wb') as f:
     print('file opened')
     while True:
-        print('receiving data'+ count*".")
+        print('receiving data'+ count*".")  #  animate dots for crash checking
         data = s.recv(1024)
         # print('data=%s', (data))
         if not data:
             break
         # write data to a file
         f.write(data)
+        # animate dots for crash checking
         count+=1
         if (count>5):
             count=0

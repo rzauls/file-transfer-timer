@@ -4,10 +4,10 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Create a socket object (s.SOCK_STREAM = TCP, s.SOCK_DGRAM = UDP)
 
 # ======================================
-# CHANGE THIS IP ADRESS TO THE SERVER IP
+# CHANGE THIS IP ADDRESS TO THE SERVER IP
 host = "192.168.8.110"   # local server IP
 port = 3000           
-# CHANGE THIS IP ADRESS TO THE SERVER IP
+# CHANGE THIS IP ADDRESS TO THE SERVER IP
 # ======================================
 
 s.bind((host, port))            # Bind to the port
