@@ -1,9 +1,15 @@
 #! python3 
 import socket                   
 
-port = 3000                    # Reserve a port for your service every new transfer wants a new port or you must wait.
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Create a socket object (s.SOCK_STREAM = TCP, s.SOCK_DGRAM = UDP)
-host = "192.168.8.110"   # Local machine ip
+
+# ======================================
+# CHANGE THIS IP ADRESS TO THE SERVER IP
+host = "192.168.8.110"   # local server IP
+port = 3000           
+# CHANGE THIS IP ADRESS TO THE SERVER IP
+# ======================================
+
 s.bind((host, port))            # Bind to the port
 s.listen(5)                     # Now wait for client connection.
 

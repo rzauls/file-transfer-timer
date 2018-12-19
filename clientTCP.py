@@ -1,8 +1,13 @@
 #! python3 
 import socket, time, os
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket object (s.SOCK_STREAM = TCP, s.SOCK_DGRAM = UDP)
-host = "192.168.8.110"  #Server ip
+
+# ======================================
+# CHANGE THIS IP ADRESS TO THE SERVER IP
+host = "192.168.8.110"  # destination IP
 port = 3000           
+# CHANGE THIS IP ADRESS TO THE SERVER IP
+# ======================================
 
 s.connect((host, port))
 msg = "Hello server!"
