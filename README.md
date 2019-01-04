@@ -9,7 +9,7 @@ A simple python socket-based networks speed measuring tool. Created mainly for R
     * Windows
     ```fsutil file createNew data.dat <size>```
     * Unix
-    ```dd if=/dev/zero of=data.dat  bs=<size>  count=1```
+    ```fallocate -l <size> <name>```
 
 2. Run server***.py in directory where data.dat is located (exact name of data file is important) on the first machine
 3. Determine IP of the server machine and edit the client script destination IP and the server script host IP
